@@ -28,10 +28,14 @@ public class RestaurantRepository {
     }
 
     public void rateRestaurant(String restaurant, int rating) {
-        restaurantRating.put(restaurant, new RestaurantRating(restaurant, rating));
+        synchronized (this) {
+            restaurantRating.put(restaurant, new RestaurantRating(restaurant, rating));
+        }
     }
 
     public void rateFoodItem(String foodItem, String restaurant, int rating) {
-        foodItemRating.put(foodItem, new RestaurantRating(restaurant, rating));
+        synchronized (this) {
+            foodItemRating.put(foodItem, new RestaurantRating(restaurant, rating));
+        }
     }
 }

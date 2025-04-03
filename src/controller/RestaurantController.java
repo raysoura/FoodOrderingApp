@@ -1,5 +1,6 @@
 package controller;
 
+import model.RestaurantRating;
 import service.RestaurantService;
 
 import java.util.List;
@@ -11,7 +12,7 @@ public class RestaurantController {
         this.restaurantService = restaurantService;
     }
 
-    public List<String> getTopRestaurantsByFood(String foodItem) {
+    public List<RestaurantRating> getTopRestaurantsByFood(String foodItem) {
         return restaurantService.getTopRestaurantsByFood(foodItem);
     }
 

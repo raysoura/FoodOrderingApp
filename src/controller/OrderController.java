@@ -9,7 +9,7 @@ public class OrderController {
         this.orderService = orderService;
     }
 
-    public void orderFood(String order, String restaurant, String foodItem) {
+    public void orderFood(String order, String foodItem, String restaurant) {
         orderService.orderFood(order, restaurant, foodItem);
     }
 

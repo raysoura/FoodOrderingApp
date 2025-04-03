@@ -2,7 +2,7 @@ package model;
 
 public class RestaurantRating {
     String restaurant;
-    int rating;
+    double rating;
 
     public String getRestaurant() {
         return restaurant;
@@ -12,11 +12,11 @@ public class RestaurantRating {
         this.restaurant = restaurant;
     }
 
-    public int getRating() {
+    public double getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(double rating) {
         this.rating = rating;
     }
 

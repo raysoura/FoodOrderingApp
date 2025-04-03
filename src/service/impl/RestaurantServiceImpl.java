@@ -1,5 +1,6 @@
 package service.impl;
 
+import model.RestaurantRating;
 import repository.RestaurantRepository;
 import service.RestaurantService;
 
@@ -13,7 +14,7 @@ public class RestaurantServiceImpl implements RestaurantService {
         this.restaurantRepository = restaurantRepository;
     }
     @Override
-    public List<String> getTopRestaurantsByFood(String foodItem) {
+    public List<RestaurantRating> getTopRestaurantsByFood(String foodItem) {
         return restaurantRepository.getTopRestaurantsByFood(foodItem);
     }
 
